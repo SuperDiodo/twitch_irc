@@ -2,10 +2,10 @@ import socket
 
 class IRC:
 
-    def __init__(self, secret: str, channel_name: str):
+    def __init__(self, channel_name: str, secret: str, nickname: str):
         self.server = 'irc.chat.twitch.tv'
         self.port = 6667
-        self.nickname = 'diodobot'
+        self.nickname = nickname
         self.token = secret
         self.channel = '#' + channel_name
         self.sock = socket.socket()
